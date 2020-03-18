@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Logic.js"></script> 
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Ueberschrift">
+        <h1 id="Headline">Axie Collection min. worth Calculator</h1>
+            <p id="Disclaimer">!Disclaimer: Third Party tool, from a self thaught coder, I guarantee non of the results!</p>
+        
+    </div>
+        <div class="Buttoncontainer">
+            <button class="Button" onclick="SelectAddress()"> Select ETH Address </button>
+                <div class="BoxText" id="ETHAddress"> 0x... </div>
+            <button class="Button" id="Converter" onclick="ETHtoUSD()"> Convert (ETH <-> USD) </button>
+                <div class="BoxText" id="ETHUSD"> 0 ETH </div>
+            <button class="Button" id="DetailViewer" onclick="CountedAxiesDetails()"> Counted Axies Details </button>
+        </div>
+</body>
+</html>
