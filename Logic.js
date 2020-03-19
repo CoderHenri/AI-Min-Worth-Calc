@@ -151,6 +151,12 @@ function CalcAccWorth() {
   console.log(parseFloat(document.getElementById("Mystic4AxiePrice").innerHTML.replace(/[^0-9]/g,'')));
   Mystic4AxieWorth = Math.round((Mystic4AxieWorth + 0.0000001) * 10000) / 10000;
   document.getElementById("Mystic4AxieWorth").innerHTML = Mystic4AxieWorth + " ETH";
+
+  var TotalWorth;
+  TotalWorth = NormAxieWorth + OriginAxieWorth + MEOAxieWorth + Mystic1AxieWorth +
+  Mystic2AxieWorth + Mystic3AxieWorth + Mystic4AxieWorth;
+  TotalWorth = Math.round((TotalWorth + 0.0000001) * 10000) / 10000;
+  document.getElementById("EntireAccountWorthField").innerHTML = TotalWorth + " ETH";
 }
 
 function AxieCountCorrector() {
@@ -166,7 +172,6 @@ function AxieCountCorrector() {
   parseFloat(document.getElementById("Mystic3AxieAmount").innerHTML.replace(/[^0-9]/g,'')) + parseFloat(document.getElementById("Mystic4AxieAmount").innerHTML.replace(/[^0-9]/g,''));
   var OriginAxies = TotalOriginAxies - MysticAxies;
   document.getElementById("OriginAxieAmount").innerHTML = OriginAxies + " Axies";
-
 }
 
 //Amount of the Axies owned by the Player
