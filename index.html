@@ -16,11 +16,27 @@
         
     </div>
         <div class="Buttoncontainer">
-            <button class="Button" onclick="SelectAddress()"> Select ETH Address </button>
-                <div class="BoxText" id="ETHAddress"> 0x... </div>
+            <button class="Button" id="SelectETHAddy" onclick="SelectAddress()"> Select ETH Address </button>
+                <div calss="ETHDisplay" id="ETHAddress"> 0x... </div>
             <button class="Button" id="WorthCalculator" onclick="CalculateWorth()" disabled> Start Calculation </button>
-                <div class="BoxText" id="AccountWorth"> 0 ETH </div>
             <button class="Button" id="DetailViewer" onclick="CountedAxiesDetails()"> Counted Axies Details </button>
+        </div>
+        <div class="Datacontainer">
+            <div class="BoxTextCategory" id="NormalAxie"> Normal Axie </div>
+            <div class="BoxTextCategory" id="OriginAxie"> Origin Axie </div>
+            <div class="BoxTextCategory" id="MEOAxie"> MEO (I & II) Axie </div>
+            <div class="BoxTextCategory" id="Mystic1Axie"> 1 Mystic Axie </div>
+            <div class="BoxTextCategory" id="Mystic2Axie"> 2 Mystic Axie </div>
+            <div class="BoxTextCategory" id="Mystic3Axie"> 3 Mystic Axie </div>
+            <div class="BoxTextCategory" id="Mystic4Axie"> 4 Mystic Axie </div>
+
+            <div class="BoxTextCategory" id="NormalAxiePrice"> N A Price ETH </div>
+            <div class="BoxTextCategory" id="OriginAxiePrice"> O A Price ETH </div>
+            <div class="BoxTextCategory" id="MEOAxiePrice"> MEO Price ETH </div>
+            <div class="BoxTextCategory" id="Mystic1AxiePrice"> 1 M A Price ETH </div>
+            <div class="BoxTextCategory" id="Mystic2AxiePrice"> 2 M A Price ETH </div>
+            <div class="BoxTextCategory" id="Mystic3AxiePrice"> 3 M A Price ETH </div>
+            <div class="BoxTextCategory" id="Mystic4AxiePrice"> 4 M A Price ETH </div>
         </div>
 </body>
 </html>
