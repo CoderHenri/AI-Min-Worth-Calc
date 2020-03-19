@@ -18,8 +18,8 @@
         <div class="Buttoncontainer">
             <button class="Button" id="SelectETHAddy" onclick="SelectAddress()"> Select ETH Address </button>
                 <div calss="ETHDisplay" id="ETHAddress"> 0x... </div>
-            <button class="Button" id="AxieFloorButton" onclick="GetAxieFloor()" disabled> Start Calculation </button>
-            <button class="Button" id="DetailViewer" onclick="CountedAxiesDetails()"> Counted Axies Details </button>
+            <button class="Button" id="AxieFloorButton" onclick="GetAxieFloor()" disabled = "disabled"> Get Prices & Axies </button>
+            <button class="Button" id="AccountCalculator" onclick="CalcAccWorth()" disabled = "disabled"> Start Calculation </button>
         </div>
         <div class="Datacontainer">
             <div class="BoxTextCategory" id="NormalAxie"> Normal Axie </div>
@@ -30,13 +30,34 @@
             <div class="BoxTextCategory" id="Mystic3Axie"> 3 Mystic Axie </div>
             <div class="BoxTextCategory" id="Mystic4Axie"> 4 Mystic Axie </div>
 
-            <div class="BoxTextCategory" id="NormalAxiePrice"> N A Price ETH </div>
-            <div class="BoxTextCategory" id="OriginAxiePrice"> O A Price ETH </div>
-            <div class="BoxTextCategory" id="MEOAxiePrice"> MEO Price ETH </div>
-            <div class="BoxTextCategory" id="Mystic1AxiePrice"> 1 M A Price ETH </div>
-            <div class="BoxTextCategory" id="Mystic2AxiePrice"> 2 M A Price ETH </div>
-            <div class="BoxTextCategory" id="Mystic3AxiePrice"> 3 M A Price ETH </div>
-            <div class="BoxTextCategory" id="Mystic4AxiePrice"> 4 M A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="NormalAxiePrice"> N A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="OriginAxiePrice"> O A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="MEOAxiePrice"> MEO Price ETH </div>
+            <div class="BoxTextPriceCategory" id="Mystic1AxiePrice"> 1 M A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="Mystic2AxiePrice"> 2 M A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="Mystic3AxiePrice"> 3 M A Price ETH </div>
+            <div class="BoxTextPriceCategory" id="Mystic4AxiePrice"> 4 M A Price ETH </div>
         </div>
+        <div id="PlayerOwned"> Please Click the "Get Prices & Axies" Button </div>
+        <div class="PlayerDatacontainer">
+            <div class="BoxTextAmountCategory" id="NormalAxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="OriginAxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="MEOAxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="Mystic1AxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="Mystic2AxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="Mystic3AxieAmount"> --- Axies </div>
+            <div class="BoxTextAmountCategory" id="Mystic4AxieAmount"> --- Axies </div>
+        </div>
+        <div id="AccountWorthField"> Please Click the "Get Prices & Axies" Button </div>
+        <div class="PlayerDatacontainer">
+            <div class="BoxTextAmountCategory" id="NormalAxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="OriginAxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="MEOAxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="Mystic1AxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="Mystic2AxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="Mystic3AxieWorth"> --- ETH </div>
+            <div class="BoxTextAmountCategory" id="Mystic4AxieWorth"> --- ETH </div>
+        </div>
+        <div id="EntireAccountWorthField"> --- ETH </div>
 </body>
 </html>

@@ -41,9 +41,10 @@
     cursor: not-allowed;
 }
 
-#DetailViewer {
+#AccountCalculator {
     right: 0px;
     bottom: 0px;
+    cursor: not-allowed;
 }
 
 #ETHAddress {
@@ -65,13 +66,70 @@
     height: 40px;
     width: 800px;
     margin: auto;
-    border: 1px solid black;
+    border: 2px solid black;
     position: relative;
 }
 
 .BoxTextCategory {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.BoxTextPriceCategory {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
     border: 1px solid black;
     text-align: center;
+}
+
+#PlayerOwned {
+    height: 40px;
+    width: 800px;
+    margin: auto;
+    border: 2px solid black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+.PlayerDatacontainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    height: 20px;
+    width: 800px;
+    margin: auto;
+    border: 2px solid black;
+    position: relative;
+}
+
+.BoxTextAmountCategory {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#AccountWorthField {
+    height: 40px;
+    width: 800px;
+    margin: auto;
+    border: 2px solid black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+#EntireAccountWorthField {
+    height: 40px;
+    width: 800px;
+    margin: auto;
+    border: 2px solid black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 40px;
 }
