@@ -35,9 +35,10 @@
     top: 0px;
 }
 
-#WorthCalculator {
+#AxieFloorButton {
     left: 0px;
     bottom: 0px;
+    cursor: not-allowed;
 }
 
 #DetailViewer {

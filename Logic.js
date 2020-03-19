@@ -4,46 +4,46 @@ function SelectAddress() {
     if (PopUp == null || PopUp == "") 
     {
         txt = "User cancelled the prompt.";
-        document.getElementById("WorthCalculator").disabled = true;
+        document.getElementById("AxieFloorButton").disabled = true;
+        document.getElementById("AxieFloorButton").style.cursor = "not-allowed";
     } else if (PopUp.startsWith("0x") && PopUp.length == 42) {
         txt = PopUp;
-        document.getElementById("WorthCalculator").disabled = false; 
+        document.getElementById("AxieFloorButton").disabled = false;
+        document.getElementById("AxieFloorButton").style.cursor = "default"; 
     } else {
         txt = "Please enter a real ETH Address";
-        document.getElementById("WorthCalculator").disabled = true;
+        document.getElementById("AxieFloorButton").disabled = true;
+        document.getElementById("AxieFloorButton").style.cursor = "not-allowed";
     }
     document.getElementById("ETHAddress").innerHTML = txt;
 }
 
-function CalculateWorth() {
+function GetAxieFloor() {
     var Address;
     Address = document.getElementById("ETHAddress").innerHTML;
     alert(Address);
 
     
 
-    var PriceNormalVirin;
-    var PriceNormalNonVirgin;
-    var PriceOrigin;
-    var PriceMystic1;
+    var PriceNormalVirinURL;
 
+    var PriceNormalNonVirginURL;
+    var PriceOriginURL;
+    var PriceMystic1URL = "https://axieinfinity.com/api/v2/axies?mystic=true&offset=1&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMystic1URL);
+    var PriceMystic2URL;
+    var PriceMystic3URL;
+    var PriceMystic4URL;
+    var PriceMEOURL;
 
-async function getAxiePrice() {
-  const resp = await fetch("https://axieinfinity.com/api/v2/axies?mystic=true&offset=1&sale=1&sorting=lowest_price");
-  const data = await resp.json()
-  var Price = data.axies[0].auction.buyNowPrice;
-  Price = Price / Math.pow(10, 18);
-  console.log(Price);
-  document.getElementById("Mystic1AxiePrice").innerHTML = Price + " ETH";
-}
-
-getAxiePrice();
-
-
-    var PriceMystic2;
-    var PriceMystic3;
-    var PriceMystic4;
-    var PriceMEO;
+  async function getAxiePrice(url) {
+    const resp = await fetch(url);
+    const data = await resp.json()
+    var Price = data.axies[0].auction.buyNowPrice;
+    Price = Price / Math.pow(10, 18);
+    console.log(Price);
+    document.getElementById("Mystic1AxiePrice").innerHTML = Price + " ETH";
+  }
 }
 
 
