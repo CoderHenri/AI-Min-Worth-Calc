@@ -161,6 +161,7 @@
     bottom: 0px;
     cursor: not-allowed;
     visibility: hidden;
+    font-size: 20px;
 }
 
 #AdvancedAccountCalculator {
@@ -168,4 +169,5 @@
     bottom: 0px;
     cursor: not-allowed;
     visibility: hidden;
+    font-size: 20px;
 }

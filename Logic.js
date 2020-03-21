@@ -24,8 +24,8 @@ function SelectAddress() {
     }
     document.getElementById("ETHAddress").innerHTML = txt;
 
-    document.getElementById("PlayerOwned").innerHTML = 'Please Click the "Get Prices & Axies" Button';
-    document.getElementById("AccountWorthField").innerHTML = 'Please Click the "Get Prices & Axies" Button';
+    document.getElementById("PlayerOwned").innerHTML = 'Please Click the "Get Prices & Axies" Button after selecting a valid ETH Address';
+    document.getElementById("AccountWorthField").innerHTML = 'Please Click the "Get Prices & Axies" Button after selecting a valid ETH Address';
     
 }
 
@@ -177,11 +177,20 @@ function AxieCountCorrector() {
   document.getElementById("OriginAxieAmount").innerHTML = OriginAxies + " Axies";
 }
 
-//Amount of the Axies owned by the Player
+var Verstecken = 1;
 
-//Please Click the "Start Calculation" Button
+function ShowHide() {
+  if(Verstecken == 1) {
+    document.getElementById("AdvancedAxieFloorButton").style.visibility = "visible";
+    document.getElementById("AdvancedAccountCalculator").style.visibility = "visible";
+    Verstecken --;
+  } else {
+    document.getElementById("AdvancedAxieFloorButton").style.visibility = "hidden";
+    document.getElementById("AdvancedAccountCalculator").style.visibility = "hidden";
+    Verstecken ++;
+  }
+}
 
-//Minimum Worth of the Account according to price floor of the Axie Marketplace
 
 
 
@@ -232,13 +241,3 @@ getAxiePrice('yourUsernameHere')
 
 console.log(PriceMystic1);
 */
-
-var SHowHide;
-
-function ShowHide() {
-
-  if(ShowHide = 1) {
-    document.getElementById("AdvancedAxieFloor").style.visibility = "visible";
-    document.getElementById("AdvancedAccountCalculator").style.cursor = "visible";
-  }
-}
