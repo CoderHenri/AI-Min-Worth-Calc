@@ -191,6 +191,14 @@ function ShowHide() {
   }
 }
 
+function AdvancedGetAxieFloor() {
+  ChooseAdvancedFilters();
+  
+}
+
+function ChooseAdvancedFilters() {
+  alert("2");
+}
 
 
 
