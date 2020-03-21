@@ -157,6 +157,9 @@ function CalcAccWorth() {
   Mystic2AxieWorth + Mystic3AxieWorth + Mystic4AxieWorth;
   TotalWorth = Math.round((TotalWorth + 0.0000001) * 10000) / 10000;
   document.getElementById("EntireAccountWorthField").innerHTML = TotalWorth + " ETH";
+
+  document.getElementById("PlayerOwned").innerHTML = 'Axies owned by the input Account';
+  document.getElementById("AccountWorthField").innerHTML = 'Minimum Worth of the Account according to price floor of the Axie Marketplace';
 }
 
 function AxieCountCorrector() {
@@ -229,3 +232,13 @@ getAxiePrice('yourUsernameHere')
 
 console.log(PriceMystic1);
 */
+
+var SHowHide;
+
+function ShowHide() {
+
+  if(ShowHide = 1) {
+    document.getElementById("AdvancedAxieFloor").style.visibility = "visible";
+    document.getElementById("AdvancedAccountCalculator").style.cursor = "visible";
+  }
+}

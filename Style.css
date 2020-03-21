@@ -133,3 +133,39 @@
     text-align: center;
     line-height: 40px;
 }
+
+.AdvancedButtoncontainer {
+    height: 100px;
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+.LargeButton {
+    height: 50px;
+    width: 600px;
+    background-color: blue;
+    color: rgb(255, 100, 0);
+    font-size: 25px;
+    position: absolute;
+}
+
+#ShowHideAdvanced {
+    left: 0px;
+    top: 0px;
+}
+
+#AdvancedAxieFloorButton {
+    left: 0px;
+    bottom: 0px;
+    cursor: not-allowed;
+    visibility: hidden;
+}
+
+#AdvancedAccountCalculator {
+    right: 0px;
+    bottom: 0px;
+    cursor: not-allowed;
+    visibility: hidden;
+}
