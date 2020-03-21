@@ -184,14 +184,28 @@
     height: 1500px;
     width: 800px;
     margin: auto;
-    border: 2px solid black;
+    border: 1px solid black;
     position: relative;
+    text-align: center;
+}
+
+#AdvancedDescription {
+    height: 50px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 150px 450px 200px;
+    left: 0px;
+    border: 1px solid black;
+    position: absolute;
 }
 
 #AdvancedFeaturesCheckBoxes {
-    height: 1500px;
+    height: 1450px;
     width: 150px;
+    display: grid;
+    grid-template-rows: 30px;
     left: 0px;
+    top: 50px;
     border: 1px solid black;
     position: absolute;
 }
