@@ -204,6 +204,7 @@ function ShowHide() {
   }
 }
 
+
 function AdvancedGetAxieFloor() {
   ChooseAdvancedFilters();
   
