@@ -186,7 +186,6 @@
     margin: auto;
     border: 1px solid black;
     position: relative;
-    text-align: center;
 }
 
 #AdvancedDescription {
@@ -197,6 +196,7 @@
     left: 0px;
     border: 1px solid black;
     position: absolute;
+    text-align: center;
 }
 
 #AdvancedFeaturesCheckBoxes {
