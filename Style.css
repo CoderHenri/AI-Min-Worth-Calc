@@ -181,7 +181,7 @@
 #AdvancedFeatures {
     display: grid;
     grid-template-columns: 150px 450px 200px;
-    height: 400px;
+    height: 1500px;
     width: 800px;
     margin: auto;
     border: 2px solid black;
@@ -189,7 +189,7 @@
 }
 
 #AdvancedFeaturesCheckBoxes {
-    height: 400px;
+    height: 1500px;
     width: 150px;
     left: 0px;
     border: 1px solid black;
@@ -197,7 +197,7 @@
 }
 
 #AmountAxiesinCategory {
-    height: 400px;
+    height: 1500px;
     width: 450px;
     left: 150px;
     border: 1px solid black;
@@ -205,7 +205,7 @@
 }
 
 #WorthAxiesinCategory {
-    height: 400px;
+    height: 1500px;
     width: 200px;
     left: 600px;
     border: 1px solid black;

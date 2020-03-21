@@ -184,6 +184,7 @@ function ShowHide() {
     document.getElementById("AdvancedAxieFloorButton").style.visibility = "visible";
     document.getElementById("AdvancedAccountCalculator").style.visibility = "visible";
     alert("Please be aware that Categories are not mutually exclusive! So if, for example an Account has a pure Axie that is a Virgin too, it will be counted in both categories!");
+    alert("Please be also aware that a chosen Category can be highly illiquid and there is no guarantee that your Axies will sell for the price displayed here!");
     Verstecken --;
   } else {
     document.getElementById("AdvancedAxieFloorButton").style.visibility = "hidden";
