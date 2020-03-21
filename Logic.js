@@ -183,6 +183,7 @@ function ShowHide() {
   if(Verstecken == 1) {
     document.getElementById("AdvancedAxieFloorButton").style.visibility = "visible";
     document.getElementById("AdvancedAccountCalculator").style.visibility = "visible";
+    alert("Please be aware that Categories are not mutually exclusive! So if, for example an Account has a pure Axie that is a Virgin too, it will be counted in both categories!");
     Verstecken --;
   } else {
     document.getElementById("AdvancedAxieFloorButton").style.visibility = "hidden";
