@@ -12,15 +12,21 @@ function SelectAddress() {
     {
         txt = "User cancelled the prompt.";
         document.getElementById("AxieFloorButton").disabled = true;
+        document.getElementById("AdvancedAxieFloorButton").disabled = true;
         document.getElementById("AxieFloorButton").style.cursor = "not-allowed";
+        document.getElementById("AdvancedAxieFloorButton").style.cursor = "not-allowed";
     } else if (PopUp.startsWith("0x") && PopUp.length == 42) {
         txt = PopUp;
         document.getElementById("AxieFloorButton").disabled = false;
-        document.getElementById("AxieFloorButton").style.cursor = "default"; 
+        document.getElementById("AdvancedAxieFloorButton").disabled = false;
+        document.getElementById("AxieFloorButton").style.cursor = "default";
+        document.getElementById("AdvancedAxieFloorButton").style.cursor = "default"; 
     } else {
         txt = "Please enter a real ETH Address";
         document.getElementById("AxieFloorButton").disabled = true;
+        document.getElementById("AdvancedAxieFloorButton").disabled = true;
         document.getElementById("AxieFloorButton").style.cursor = "not-allowed";
+        document.getElementById("AdvancedAxieFloorButton").style.cursor = "not-allowed";
     }
     document.getElementById("ETHAddress").innerHTML = txt;
 
@@ -212,6 +218,70 @@ function AdvancedGetAxieFloor() {
 
 function ChooseAdvancedFilters() {
   alert("2");
+
+  FirstOnclickCheck = 0;
+
+  document.getElementById("AdvancedAccountCalculator").disabled = true;
+  document.getElementById("AdvancedAccountCalculator").style.cursor = "not-allowed";
+
+    var Address;
+    Address = document.getElementById("ETHAddress").innerHTML;
+    
+    var PriceNormalURL = "https://axieinfinity.com/api/v2/axies?sale=1&sorting=lowest_price";
+    getAxiePrice(PriceNormalURL, "NormalAxiePrice");
+    var PriceOriginURL = "https://axieinfinity.com/api/v2/axies?title=Origin&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceOriginURL, "OriginAxiePrice");
+    var PriceMystic1URL = "https://axieinfinity.com/api/v2/axies?mystic=true&num_mystic=1&offset=0&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMystic1URL, "Mystic1AxiePrice");
+    var PriceMystic2URL = "https://axieinfinity.com/api/v2/axies?mystic=true&num_mystic=2&offset=0&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMystic2URL, "Mystic2AxiePrice");
+    var PriceMystic3URL = "https://axieinfinity.com/api/v2/axies?mystic=true&num_mystic=3&offset=0&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMystic3URL, "Mystic3AxiePrice");
+    var PriceMystic4URL = "https://axieinfinity.com/api/v2/axies?mystic=true&num_mystic=4&offset=0&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMystic4URL, "Mystic4AxiePrice");
+    var PriceMEOURL = "https://axieinfinity.com/api/v2/axies?title=meo%20corp&sale=1&sorting=lowest_price";
+    getAxiePrice(PriceMEOURL, "MEOAxiePrice");
+
+  async function getAxiePrice(url, id) {
+    const resp = await fetch(url);
+    const data = await resp.json()
+    var Price = data.axies[0].auction.buyNowPrice;
+    Price = Price / Math.pow(10, 18);
+    Price = Math.round((Price + 0.0000001) * 10000) / 10000
+    document.getElementById(id).innerHTML = Price + " ETH";
+  }
+
+    var AmountNormalURL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?";
+    getAxieAmount(AmountNormalURL, "NormalAxieAmount");
+    var AmountOriginURL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?title=Origin";
+    getAxieAmount(AmountOriginURL, "OriginAxieAmount");
+    var AmountMystic1URL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?mystic=true&num_mystic=1";
+    getAxieAmount(AmountMystic1URL, "Mystic1AxieAmount");
+    var AmountMystic2URL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?mystic=true&num_mystic=2";
+    getAxieAmount(AmountMystic2URL, "Mystic2AxieAmount");
+    var AmountMystic3URL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?mystic=true&num_mystic=3";
+    getAxieAmount(AmountMystic3URL, "Mystic3AxieAmount");
+    var AmountMystic4URL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?mystic=true&num_mystic=4";
+    getAxieAmount(AmountMystic4URL, "Mystic4AxieAmount");
+    var AmountMEOURL = "https://axieinfinity.com/api/v2/addresses/" + Address + "/axies?title=meo%20corp";
+    getAxieAmount(AmountMEOURL, "MEOAxieAmount");
+
+  async function getAxieAmount(url, id) {
+    const resp = await fetch(url);
+    const data = await resp.json()
+    var Amount = data.totalAxies;
+    document.getElementById(id).innerHTML = Amount + " Axies";
+  }
+
+  document.getElementById("PlayerOwned").innerHTML = 'Please Click the "Start Calculation" Button to correct the Amount of Total to Normal Axies and start the Calculation';
+  document.getElementById("AccountWorthField").innerHTML = 'Please Click the "Start Calculation" Button to correct the Amount of Total to Normal Axies and start the Calculation';
+
+
+  setTimeout(function(){
+    document.getElementById("AdvancedAccountCalculator").disabled = false;
+    document.getElementById("AdvancedAccountCalculator").style.cursor = "default"; 
+  }, 3000);
+
 }
 
 
