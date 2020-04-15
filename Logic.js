@@ -219,7 +219,9 @@ function AdvancedGetAxieFloor() {
 function ChooseAdvancedFilters() {
   alert("2");
 
-  FirstOnclickCheck = 0;
+  //work in progress, still needs a lot of adjustments
+
+  //FirstOnclickCheck = 0; <- breaks the funktion of this atm
 
   document.getElementById("AdvancedAccountCalculator").disabled = true;
   document.getElementById("AdvancedAccountCalculator").style.cursor = "not-allowed";
